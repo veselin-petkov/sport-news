@@ -1,0 +1,10 @@
+.livescore {
+    position: fixed;
+    top: 145px;
+    right: 5%;
+    bottom: 10px;
+    width: 250px;
+    overflow-y: scroll;
+    background-color:cadetblue;
+    text-align: center;
+}
