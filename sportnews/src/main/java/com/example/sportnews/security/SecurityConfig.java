@@ -48,9 +48,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.cors();
 
         http.addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class);
-        //tuka trqbva da e account settings ili tam kvoto samo trqbva da e restricted :)
-
-        //RAZBRA LI GLUPAKO AZ SUM PRINCA NA MONAKO! ;*
     }
 
     @Override
