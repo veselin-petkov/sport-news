@@ -4,6 +4,7 @@ import com.example.sportnews.core.NewsService;
 
 import com.example.sportnews.core.models.News;
 import com.example.sportnews.web.api.models.NewsInput;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.AccessDeniedException;
@@ -22,11 +23,9 @@ import static com.example.sportnews.web.api.controllers.TokenUtil.getUserFromTok
 @Controller
 public class NewsController {
 
+    @Autowired
     public NewsService newsService;
 
-    public NewsController(NewsService newsService) {
-        this.newsService = newsService;
-    }
 
     @GetMapping("")
     public List<News> list() {

@@ -3,6 +3,7 @@ package com.example.sportnews.web.api.controllers;
 import com.example.sportnews.core.CommentService;
 import com.example.sportnews.core.models.Comment;
 import com.example.sportnews.web.api.models.CommentInput;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,11 +17,8 @@ import static com.example.sportnews.web.api.controllers.TokenUtil.getUserFromTok
 @Controller
 public class CommentController {
 
+    @Autowired
     public CommentService commentService;
-
-    public CommentController(CommentService commentService){
-        this.commentService = commentService;
-    }
 
 
     @GetMapping("")

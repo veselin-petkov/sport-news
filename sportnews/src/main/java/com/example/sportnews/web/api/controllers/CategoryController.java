@@ -22,11 +22,9 @@ import static com.example.sportnews.web.api.controllers.TokenUtil.getRoleFromTok
 @Controller
 public class CategoryController {
 
+    @Autowired
     public CategoryService categoryService;
 
-    public CategoryController(CategoryService categoryService) {
-        this.categoryService = categoryService;
-    }
 
     @GetMapping("/{category}")
     public ResponseEntity<Category> getCategory(String category){

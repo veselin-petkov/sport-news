@@ -3,6 +3,7 @@ package com.example.sportnews.web.api.controllers;
 import com.example.sportnews.core.TagService;
 import com.example.sportnews.core.models.Tag;
 import com.example.sportnews.web.api.models.NewsInput;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,12 +18,8 @@ import static com.example.sportnews.web.api.controllers.TokenUtil.getUserFromTok
 @RequestMapping("/tag")
 @Controller
 public class TagController {
-
+    @Autowired
     public TagService tagService;
-
-    public TagController(TagService tagService) {
-        this.tagService = tagService;
-    }
 
     @GetMapping("/{id}")
     public Tag getTag(@PathVariable Integer id){

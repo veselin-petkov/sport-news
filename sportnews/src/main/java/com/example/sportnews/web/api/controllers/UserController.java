@@ -3,6 +3,7 @@ package com.example.sportnews.web.api.controllers;
 import com.example.sportnews.core.UserService;
 
 import com.example.sportnews.core.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -17,10 +18,7 @@ import java.util.NoSuchElementException;
 @Controller
 public class UserController {
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
+    @Autowired
     public UserService userService;
 
 
